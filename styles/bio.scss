@@ -1,2 +1,122 @@
-// .navbar {
-// }
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/reset";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $headercolor;
+  @include tablet {
+  }
+  @include desktop {
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__link {
+    list-style: none;
+  }
+
+  &__left {
+  }
+
+  &__right {
+  }
+}
+
+.hero {
+  @include imagedimenisons;
+  background-image: url(../assets/images/hero-bio.jpg);
+  &__title {
+  }
+  &__tagline {
+  }
+}
+
+.bio {
+  &__title {
+  }
+  &__quote {
+  }
+  &__subtitle {
+  }
+  &__paragraph--one {
+  }
+  &__paragraph--two {
+  }
+}
+
+.photo-gallery {
+  &__photo {
+  }
+  &__one {
+    width: 100%;
+    height: 100%;
+  }
+  &__two {
+  }
+  &__four {
+  }
+  &-five {
+  }
+  &-six {
+  }
+  &-seven {
+  }
+  &-eight {
+  }
+  &-nine {
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $headercolor;
+  @include tablet {
+  }
+  @include desktop {
+  }
+  &__one {
+  }
+  &__title {
+  }
+  &__two {
+  }
+  &__icon--instagram {
+  }
+  &__icon--facebook {
+  }
+  &__icon--twitter {
+  }
+  &__three {
+  }
+  &__four {
+  }
+  &__five {
+  }
+  &__six {
+  }
+  &__seven {
+  }
+  &__eight {
+  }
+  &__nine {
+  }
+  &__ten {
+  }
+  &__eleven {
+  }
+  &__logo {
+  }
+  &__thirteen {
+  }
+}

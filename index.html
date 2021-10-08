@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/bio.css" />
+    <title>Bandsite</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="./index.html">
-          <img
-            alt="Logo-bandsite"
-            src="./assets/logo/Logo-bandsite.svg"
-            class="navbar_logo"
-          />
-        </a>
+        <div class="navbar__container">
+          <a href="./index.html">
+            <img
+              alt="Logo-bandsite"
+              src="./assets/logo/Logo-bandsite.svg"
+              class="navbar__logo"
+            />
+          </a>
+        </div>
         <ul class="navbar__link">
           <li class="navbar__left">Biography</li>
           <li class="navbar__right">Shows</li>
         </ul>
       </nav>
-      <img class="hero" src="./assets/images/hero-bio.jpg" alt="hero-bio" />
-      <h1 class="hero__title">The Bees Knees</h1>
+      <div class="hero">
+        <h1 class="hero__title">The Bees Knees</h1>
+      </div>
     </header>
     <h2 class="bio__title">About the Musicians</h2>
+    <img src="./assets/images/band.jpg" alt="band" class="photogallery__one" />
     <p class="bio__quote">
       “We push each other to be the best. It’s not uncommon for one of us to say
       ‘this needs to be better, back to the drawing board’”
@@ -53,53 +58,63 @@
       to touring in the future, The Bees Knees are currently recording their
       second studio album, looking to be released in late 2021.
     </p2>
-    <h2 class="photogallery">Photo Gallery</h2>
-    <img
-      src="./assets/images/Photo-gallery-1.jpg"
-      alt="Photo-gallery-1"
-      class="photogallery_one"
-    />
-    <img
-      src="./assets/images/Photo-gallery-2.jpg"
-      alt="Photo-gallery-2"
-      class="photogallery_two"
-    />
-    <img
-      src="./assets/images/Photo-gallery-3.jpg"
-      alt="Photo-gallery-3"
-      class="photogallery_three"
-    />
-    <img
-      src="./assets/images/Photo-gallery-4.jpg"
-      alt="Photo-gallery-4"
-      class="photogallery_four"
-    />
-    <img
-      src="./assets/images/Photo-gallery-5.jpg"
-      alt="Photo-gallery-5"
-      class="photogallery_five"
-    />
+    <h2 class="photo-gallery">Photo Gallery</h2>
+    <div class="photo-gallery__photo">
+      <img
+        src="./assets/images/Photo-gallery-1.jpg"
+        alt="photo-gallery-1"
+        class="photogallery__one"
+      />
+    </div>
+    <div class="photo-gallery__photo">
+      <img
+        src="./assets/images/Photo-gallery-2.jpg"
+        alt="photo-gallery-2"
+        class="photogallery__two"
+      />
+    </div>
+    <div class="photo-gallery__photo">
+      <img
+        src="./assets/images/Photo-gallery-3.jpg"
+        alt="photo-gallery-3"
+        class="photogallery__three"
+      />
+    </div>
+    <div class="photo-gallery__photo">
+      <img
+        src="./assets/images/Photo-gallery-4.jpg"
+        alt="photo-gallery-4"
+        class="photogallery__four"
+      />
+    </div>
+    <div class="photo-gallery__photo">
+      <img
+        src="./assets/images/Photo-gallery-5.jpg"
+        alt="photo-gallery-5"
+        class="photogallery__five"
+      />
+    </div>
     <img
       src="./assets/images/Photo-gallery-6.jpg"
-      alt="Photo-gallery-6"
-      class="photogallery_six"
+      alt="photo-gallery-6"
+      class="photogallery__six"
     />
     <img
       src="./assets/images/Photo-gallery-7.jpg"
-      alt="Photo-gallery-7"
-      class="photogallery_seven"
+      alt="photo-gallery-7"
+      class="photogallery__seven"
     />
     <img
       src="./assets/images/Photo-gallery-8.jpg"
-      alt="Photo-gallery-8"
-      class="photogallery_eight"
+      alt="photo-gallery-8"
+      class="photogallery__eight"
     />
     <img
       src="./assets/images/Photo-gallery-9.jpg"
-      alt="Photo-gallery-9"
-      class="photogallery_nine"
+      alt="photo-gallery-9"
+      class="photogallery__nine"
     />
-    <footer>
+    <footer class="footer">
       <div class="footer__one">
         <h2 class="footer__title">Get in Touch</h2>
       </div>
@@ -107,72 +122,70 @@
         <img
           src="./assets/icons/SVG/Icon-instagram.svg"
           alt="icon-instagram"
-          class="instagram__icon"
+          class="footer__icon--instagram footer__icon"
         />
         <img
           src="./assets/icons/SVG/Icon-facebook.svg"
           alt="icon-facebook"
-          class="facebook__icon"
+          class="footer__icon--facebook footer__icon"
         />
         <img
           src="./assets/icons/SVG/Icon-twitter.svg"
           alt="icon-twitter"
-          class="twitter__icon"
+          class="footer__icon--twitter footer__icon"
         />
       </div>
       <div class="footer__three">
         <p class="footer__management">
-          Cam Adams<br>
-          The Bees Knees Management</br>
+          Cam Adams<br />
+          The Bees Knees Management
         </p>
       </div>
       <div class="footer__four">
-        <p class= "footer__broadway-adress">
-          503 Broadway Penthouse,<br>
-          New York, NY 10012, USA</br>
+        <p class="footer__broadway-adress">
+          503 Broadway Penthouse,<br />
+          New York, NY 10012, USA
         </p>
       </div>
       <div class="footer__five">
-        <p class="footer__email--one">
-          info@thebesknee.com
-        </p>
+        <p class="footer__email--one footer__email">info@thebesknee.com</p>
       </div>
       <div class="footer__six">
         <p class="footer__group">
-          Pearl Gregg<br>
-          Limitless Artist Group</br>
+          Pearl Gregg<br />
+          Limitless Artist Group
         </p>
       </div>
       <div class="footer__seven">
         <p>
-          Booking Agent for<br>
-          US / South America / Japan</br>
+          Booking Agent for<br />
+          US / South America / Japan
         </p>
       </div>
       <div class="footer__eight">
-        <p class="footer__email--two">
+        <p class="footer__email--two footer__email">
           pearl.gregg@limitedessag.com
         </p>
       </div>
       <div class="footer__nine">
-        <p>
-          Carson Whyte<br>
-          ARCH Entertainment</br>
+        <p class="footer__group">
+          Carson Whyte<br />
+          ARCH Entertainment
         </p>
       </div>
       <div class="footer__ten">
         <p>
-          Booking Agent for<br>
-          UK / EU / AU</br>
+          Booking Agent for<br />
+          UK / EU / AU
         </p>
       </div>
-      <div class="footer__eleven">
-        cwhyte@archentertainment.com
-      </div>
+      <div class="footer__eleven">cwhyte@archentertainment.com</div>
       <div class="footer__twelve">
-        <p class="footer_logo">
-          Bandsite
-        </p>
+        <img
+          src="./assets/logo/Logo-bandsite.svg"
+          alt="logo-bandsite"
+          class="footer__logo"
+        />
       </div>
       <div class="footer__thirteen">
         <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
