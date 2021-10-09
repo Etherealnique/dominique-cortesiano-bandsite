@@ -1,8 +1,27 @@
+@font-face {
+  font-family: "avenir";
+  src: url(../../assets/font/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url(../../assets/font/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url(../../assets/font/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+
 html * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "avenir";
 }
 
 .navbar {
@@ -14,6 +33,9 @@ html * {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #323232;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
 }
 
 .navbar__container {
@@ -30,26 +52,116 @@ html * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 20px;
+  width: 120px;
 }
 
 .navbar__link {
   list-style: none;
-}
-
-.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../assets/images/hero-bio.jpg);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.photo-gallery__one {
-  width: 100%;
-  height: 100%;
+.navbar__left {
+  color: white;
+  border-bottom: white solid 2px;
+}
+
+.navbar__right {
+  color: white;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  background-image: url(../assets/images/hero-bio.jpg);
+  margin-bottom: 35px;
+}
+
+.hero__title {
+  line-height: 32px;
+  font-size: 24px;
+  padding: 22vh 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.bio {
+  padding: 16px;
+}
+
+.bio__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-left: 2.5px;
+  font-weight: 600;
+  color: #323232;
+}
+
+.bio__image {
+  width: 100vw;
+  padding-right: 16px;
+}
+
+.bio__quote {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.bio__quote--artist {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.bio__subtitle {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.bio__paragraph--one {
+  color: #323232;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.bio__paragraph--two {
+  color: #323232;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.photo-gallery {
+  padding-left: 16px;
+  font-weight: 600;
+  width: 100vw;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.photo-gallery:hover {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.photo-gallery__section {
+  background-color: #fafafa;
+}
+
+.photo-gallery__image {
+  padding: 16px;
+  width: 100vw;
 }
 
 .footer {
@@ -61,5 +173,11 @@ html * {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #323232;
+  color: white;
+}
+
+.footer__title {
+  padding-top: 1.5rem;
+  font-weight: 00;
 }
 /*# sourceMappingURL=bio.css.map */

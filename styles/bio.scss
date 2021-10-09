@@ -5,8 +5,11 @@
 .navbar {
   display: flex;
   flex-direction: column;
-
   background-color: $headercolor;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+
   @include tablet {
   }
   @include desktop {
@@ -19,68 +22,114 @@
 
   &__logo {
     display: flex;
+    height: 20px;
+    width: 120px;
   }
 
   &__link {
     list-style: none;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
   }
 
   &__left {
+    color: $navbarfontcolor;
+    border-bottom: white solid 2px;
   }
 
   &__right {
+    color: $navbarfontcolor;
   }
 }
 
 .hero {
-  @include imagedimenisons;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
   background-image: url(../assets/images/hero-bio.jpg);
+  margin-bottom: 35px;
   &__title {
+    line-height: 32px;
+    font-size: 24px;
+    padding: 22vh 1rem;
+    font-weight: 600;
+    color: $navbarfontcolor;
   }
   &__tagline {
   }
 }
 
 .bio {
+  padding: 16px;
+
   &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding-left: 2.5px;
+    font-weight: 600;
+    color: $biocolor;
   }
+  &__image {
+    width: 100vw;
+    padding-right: 16px;
+  }
+
   &__quote {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    &--artist {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
   &__subtitle {
+    font-weight: 600;
+    font-size: 15px;
+    // line-height: 18px;
   }
   &__paragraph--one {
+    color: $biocolor;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
   }
   &__paragraph--two {
+    color: $biocolor;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
 .photo-gallery {
+  padding-left: 16px;
+  font-weight: 600;
+  width: 100vw;
+  filter: grayscale(100%);
+  transition: 1s;
+  &:hover {
+    filter: grayscale(50%);
+  }
+  &__section {
+    background-color: $photogallerybg;
+  }
   &__photo {
   }
-  &__one {
-    width: 100%;
-    height: 100%;
-  }
-  &__two {
-  }
-  &__four {
-  }
-  &-five {
-  }
-  &-six {
-  }
-  &-seven {
-  }
-  &-eight {
-  }
-  &-nine {
+  &__image {
+    padding: 16px;
+    width: 100vw;
   }
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: $headercolor;
+  background-color: $footercolor;
+  color: $footertextcolor;
   @include tablet {
   }
   @include desktop {
@@ -88,6 +137,8 @@
   &__one {
   }
   &__title {
+    padding-top: 1.5rem;
+    font-weight: 00;
   }
   &__two {
   }
@@ -97,17 +148,23 @@
   }
   &__icon--twitter {
   }
+  &__section--left {
+  }
   &__three {
   }
   &__four {
   }
   &__five {
   }
+  &__section--middle {
+  }
   &__six {
   }
   &__seven {
   }
   &__eight {
+  }
+  &__section--right {
   }
   &__nine {
   }
