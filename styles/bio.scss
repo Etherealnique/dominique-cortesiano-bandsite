@@ -2,100 +2,202 @@
 @import "./partials/mixins";
 @import "./partials/reset";
 
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   display: flex;
   flex-direction: column;
   background-color: $headercolor;
   font-weight: 400;
   font-size: 10px;
-  line-height: 20px;
+  line-height: 15px;
 
   @include tablet {
+    flex-direction: row;
+    background-color: $headercolor;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
   }
   @include desktop {
   }
   &__container {
     display: flex;
     justify-content: center;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
+    @include tablet {
+      padding-left: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    @include desktop {
+      padding-left: 4rem;
+    }
   }
+  @include tablet {
+    display: flex;
 
+    background-color: $headercolor;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
   &__logo {
     display: flex;
     height: 20px;
     width: 120px;
   }
 
-  &__link {
+  &__list {
     list-style: none;
     display: flex;
     width: 100vw;
     justify-content: space-around;
+    padding-top: 13px;
+
+    a {
+      display: inline-block;
+    }
+    @include tablet {
+      display: inline-block;
+    }
   }
 
-  &__left {
+  &__link {
     color: $navbarfontcolor;
-    border-bottom: white solid 2px;
-  }
+    width: 50vw;
+    text-align: center;
+    padding-bottom: 8px;
+    @include tablet {
+      width: fit-content;
+      margin: 24px 32px 0;
+      padding-bottom: 32px;
+    }
+    &--selected {
+      border-bottom: 3px solid white;
+    }
 
-  &__right {
-    color: $navbarfontcolor;
+    &:hover {
+      border-bottom: 3px solid white;
+    }
   }
 }
 
 .hero {
+  position: relative;
   background-size: cover;
   background-position: center;
   width: 100vw;
   background-image: url(../assets/images/hero-bio.jpg);
-  margin-bottom: 35px;
+  margin-bottom: 8px;
+  &__overlay {
+    background-color: $BandSite-Black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
   &__title {
+    position: relative;
     line-height: 32px;
     font-size: 24px;
-    padding: 22vh 1rem;
+    padding: 10vh 1.5rem;
     font-weight: 600;
     color: $navbarfontcolor;
-  }
-  &__tagline {
+    z-index: 5;
+    @include tablet {
+      padding: 25vh 1.5rem;
+      line-height: 68px;
+      font-size: 60px;
+    }
   }
 }
 
 .bio {
   padding: 16px;
-
+  @include tablet {
+    padding: 36px;
+  }
+  &__paragraph-section {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   &__title {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    padding-left: 2.5px;
-    font-weight: 600;
     color: $biocolor;
+    padding-left: 2.5px;
+    padding-bottom: 5px;
+    @include tablet {
+      font-size: 35px;
+      line-height: 44px;
+    }
+    @include desktop {
+    }
+  }
+  &__holder {
+    @include tablet {
+      padding: 16px 36px;
+    }
+  }
+  &__figure {
+    // padding: 16px;
   }
   &__image {
-    width: 100vw;
-    padding-right: 16px;
+    width: 100%;
   }
 
   &__quote {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
+    color: $biocolor;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 36px;
+    }
     &--artist {
       font-weight: 600;
       font-size: 14px;
       line-height: 22px;
+      color: $biocolor;
+      padding-bottom: 25px;
     }
   }
   &__subtitle {
     font-weight: 600;
-    font-size: 15px;
-    // line-height: 18px;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &__container--top {
+    padding-bottom: 10px;
+    @include tablet {
+      display: flex;
+    }
   }
   &__paragraph--one {
     color: $biocolor;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    padding-right: 1rem;
+  }
+  &__container--bottom {
+    padding-top: 10px;
+    @include tablet {
+      padding-top: 0px;
+    }
   }
   &__paragraph--two {
     color: $biocolor;
@@ -106,74 +208,155 @@
 }
 
 .photo-gallery {
-  padding-left: 16px;
-  font-weight: 600;
-  width: 100vw;
-  filter: grayscale(100%);
-  transition: 1s;
-  &:hover {
-    filter: grayscale(50%);
+  padding-top: 20px;
+  background-color: $photogallerybg;
+  &__title {
+    padding-left: 54px;
+    font-weight: 600;
+    width: 100vw;
   }
-  &__section {
-    background-color: $photogallerybg;
-  }
-  &__photo {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
   }
   &__image {
-    padding: 16px;
-    width: 100vw;
+    padding: 8px 16px;
+    width: 100%;
+    filter: grayscale(50%);
+    transition: 1s;
+    &:hover {
+      filter: grayscale(100%);
+    }
+    @include tablet {
+      width: 30%;
+      padding: 8px;
+    }
   }
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
   background-color: $footercolor;
   color: $footertextcolor;
-  @include tablet {
-  }
-  @include desktop {
-  }
+  width: 100vw;
+  padding: 16px;
+
   &__one {
   }
   &__title {
-    padding-top: 1.5rem;
-    font-weight: 00;
+    padding-top: 1rem;
+    padding-bottom: 15px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
   }
   &__two {
   }
   &__icon--instagram {
+    padding-right: 20px;
   }
   &__icon--facebook {
+    padding-right: 20px;
   }
   &__icon--twitter {
   }
   &__section--left {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+    }
   }
   &__three {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  &__broadway-adress {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 15px;
   }
   &__four {
   }
   &__five {
   }
+  &__email--one {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 15px;
+  }
   &__section--middle {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+    }
   }
   &__six {
   }
+  &__group {
+    padding-bottom: 15px;
+  }
+  &__booking--one {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
   &__seven {
+  }
+  &__booking--one {
+    padding-bottom: 15px;
   }
   &__eight {
   }
+  &__email--two {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 15px;
+  }
   &__section--right {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+    }
   }
   &__nine {
   }
   &__ten {
   }
+  &__booking--two {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 15px;
+  }
   &__eleven {
+  }
+  &____email--three {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding-bottom: 15px;
+  }
+  &__twelve {
+    padding-top: 55px;
+    padding-bottom: 10px;
   }
   &__logo {
   }
   &__thirteen {
+  }
+  &__copyright {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
   }
 }
