@@ -62,20 +62,20 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
 }
 
 @media (min-width: 48rem) {
   .navbar__container {
     padding-left: 2rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 }
 
 @media (min-width: 80rem) {
   .navbar__container {
-    padding-left: 4rem;
+    padding-left: 7rem;
   }
 }
 
@@ -121,7 +121,7 @@ html {
 }
 
 .navbar__link {
-  color: white;
+  color: #ffffff;
   width: 50vw;
   text-align: center;
   padding-bottom: 8px;
@@ -168,15 +168,21 @@ html {
   font-size: 24px;
   padding: 10vh 1.5rem;
   font-weight: 600;
-  color: white;
+  color: #ffffff;
   z-index: 5;
 }
 
 @media (min-width: 48rem) {
   .hero__title {
-    padding: 25vh 1.5rem;
+    padding: 25vh 2rem;
     line-height: 68px;
     font-size: 60px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .hero__title {
+    padding: 30vh 6rem;
   }
 }
 
@@ -186,7 +192,7 @@ html {
 
 @media (min-width: 48rem) {
   .bio {
-    padding: 36px;
+    padding: 36px 36px 0 36px;
   }
 }
 
@@ -213,19 +219,40 @@ html {
 
 @media (min-width: 48rem) {
   .bio__title {
-    font-size: 35px;
+    font-weight: 700;
+    font-size: 36px;
     line-height: 44px;
+    padding-left: 0.5rem;
   }
 }
 
 @media (min-width: 48rem) {
   .bio__holder {
-    padding: 16px 36px;
+    padding-top: 16px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .bio__holder {
+    padding-top: 30;
+    padding-bottom: 0;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 
 .bio__image {
+  height: 40%;
   width: 100%;
+}
+
+@media (min-width: 80rem) {
+  .bio__image {
+    height: 30rem;
+  }
 }
 
 .bio__quote {
@@ -241,6 +268,7 @@ html {
   .bio__quote {
     font-size: 24px;
     line-height: 36px;
+    max-width: 722px;
   }
 }
 
@@ -292,7 +320,8 @@ html {
 
 @media (min-width: 48rem) {
   .bio__container--bottom {
-    padding-top: 0px;
+    padding-top: 0;
+    padding-left: 50px;
   }
 }
 
@@ -304,14 +333,27 @@ html {
 }
 
 .photo-gallery {
-  padding-top: 20px;
+  padding-top: 30px;
   background-color: #fafafa;
+  color: #323232;
 }
 
 .photo-gallery__title {
-  padding-left: 54px;
-  font-weight: 600;
-  width: 100vw;
+  padding-left: 15px;
+}
+
+@media (min-width: 48rem) {
+  .photo-gallery__title {
+    padding-left: 44px;
+    font-weight: 600;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 80rem) {
+  .photo-gallery__title {
+    padding-left: 130px;
+  }
 }
 
 .photo-gallery__container {
@@ -326,18 +368,24 @@ html {
   margin-bottom: 32px;
 }
 
+@media (min-width: 80rem) {
+  .photo-gallery__container {
+    padding: 0 64px;
+  }
+}
+
 .photo-gallery__image {
   padding: 8px 16px;
   width: 100%;
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .photo-gallery__image:hover {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
 }
 
 @media (min-width: 48rem) {
@@ -349,9 +397,53 @@ html {
 
 .footer {
   background-color: #323232;
-  color: white;
+  color: #ffffff;
   width: 100vw;
   padding: 16px;
+}
+
+@media (min-width: 48rem) {
+  .footer {
+    padding: 42px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .footer {
+    padding-top: 64px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__container-whole {
+    position: relative;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__container-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__container-bottom {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 80rem) {
+  .footer__container-bottom {
+    width: 70%;
+  }
 }
 
 .footer__title {
@@ -359,7 +451,38 @@ html {
   padding-bottom: 15px;
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .footer__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.footer__two {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 48rem) {
+  .footer__two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-left: 47px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .footer__two {
+    padding-left: 122px;
+  }
 }
 
 .footer__icon--instagram {
@@ -383,8 +506,13 @@ html {
 }
 
 .footer__three {
-  padding-top: 15px;
   padding-bottom: 15px;
+}
+
+@media (min-width: 48rem) {
+  .footer__three {
+    padding-bottom: 25px;
+  }
 }
 
 .footer__broadway-adress {
@@ -392,6 +520,12 @@ html {
   font-size: 13px;
   line-height: 18px;
   padding-bottom: 15px;
+}
+
+@media (min-width: 48rem) {
+  .footer__broadway-adress {
+    padding-bottom: 25px;
+  }
 }
 
 .footer__email--one {
@@ -417,14 +551,23 @@ html {
   padding-bottom: 15px;
 }
 
+@media (min-width: 48rem) {
+  .footer__group {
+    padding-bottom: 25px;
+  }
+}
+
 .footer__booking--one {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  padding-bottom: 15px;
 }
 
-.footer__booking--one {
-  padding-bottom: 15px;
+@media (min-width: 48rem) {
+  .footer__booking--one {
+    padding-bottom: 25px;
+  }
 }
 
 .footer__email--two {
@@ -453,7 +596,13 @@ html {
   padding-bottom: 15px;
 }
 
-.footer____email--three {
+@media (min-width: 48rem) {
+  .footer__booking--two {
+    padding-bottom: 25px;
+  }
+}
+
+.footer__email--three {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -463,6 +612,21 @@ html {
 .footer__twelve {
   padding-top: 55px;
   padding-bottom: 10px;
+}
+
+@media (min-width: 48rem) {
+  .footer__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .footer__logo {
+    padding-right: 15px;
+  }
 }
 
 .footer__copyright {

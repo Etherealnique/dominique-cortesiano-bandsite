@@ -5,40 +5,37 @@
 html {
   scroll-behavior: smooth;
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
-  background-color: $headercolor;
+  background-color: $BandSite-Black;
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
-
   @include tablet {
     flex-direction: row;
-    background-color: $headercolor;
+    background-color: $BandSite-Black;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
   }
-  @include desktop {
-  }
   &__container {
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 1.2rem;
     @include tablet {
       padding-left: 2rem;
       padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     @include desktop {
-      padding-left: 4rem;
+      padding-left: 7rem;
     }
   }
   @include tablet {
     display: flex;
-
-    background-color: $headercolor;
+    background-color: $BandSite-Black;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
@@ -48,14 +45,12 @@ html {
     height: 20px;
     width: 120px;
   }
-
   &__list {
     list-style: none;
     display: flex;
     width: 100vw;
     justify-content: space-around;
     padding-top: 13px;
-
     a {
       display: inline-block;
     }
@@ -63,9 +58,8 @@ html {
       display: inline-block;
     }
   }
-
   &__link {
-    color: $navbarfontcolor;
+    color: $White;
     width: 50vw;
     text-align: center;
     padding-bottom: 8px;
@@ -77,7 +71,6 @@ html {
     &--selected {
       border-bottom: 3px solid white;
     }
-
     &:hover {
       border-bottom: 3px solid white;
     }
@@ -104,12 +97,15 @@ html {
     font-size: 24px;
     padding: 10vh 1.5rem;
     font-weight: 600;
-    color: $navbarfontcolor;
+    color: $White;
     z-index: 5;
     @include tablet {
-      padding: 25vh 1.5rem;
+      padding: 25vh 2rem;
       line-height: 68px;
       font-size: 60px;
+    }
+    @include desktop {
+      padding: 30vh 6rem;
     }
   }
 }
@@ -117,7 +113,7 @@ html {
 .bio {
   padding: 16px;
   @include tablet {
-    padding: 36px;
+    padding: 36px 36px 0 36px;
   }
   &__paragraph-section {
     @include tablet {
@@ -129,44 +125,54 @@ html {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    color: $biocolor;
+    color: $BandSite-Black;
     padding-left: 2.5px;
     padding-bottom: 5px;
     @include tablet {
-      font-size: 35px;
+      font-weight: 700;
+      font-size: 36px;
       line-height: 44px;
-    }
-    @include desktop {
+      padding-left: 0.5rem;
     }
   }
   &__holder {
     @include tablet {
-      padding: 16px 36px;
+      padding-top: 16px;
+      padding-bottom: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include desktop {
+      padding-top: 30;
+      padding-bottom: 0;
+      padding-left: 200px;
+      padding-right: 200px;
     }
   }
-  &__figure {
-    // padding: 16px;
-  }
   &__image {
+    height: 40%;
     width: 100%;
+    @include desktop {
+      height: 30rem;
+    }
   }
-
   &__quote {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-    color: $biocolor;
+    color: $BandSite-Black;
     padding-top: 20px;
     padding-bottom: 8px;
     @include tablet {
       font-size: 24px;
       line-height: 36px;
+      max-width: 722px;
     }
     &--artist {
       font-weight: 600;
       font-size: 14px;
       line-height: 22px;
-      color: $biocolor;
+      color: $BandSite-Black;
       padding-bottom: 25px;
     }
   }
@@ -187,7 +193,7 @@ html {
     }
   }
   &__paragraph--one {
-    color: $biocolor;
+    color: $BandSite-Black;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
@@ -196,11 +202,12 @@ html {
   &__container--bottom {
     padding-top: 10px;
     @include tablet {
-      padding-top: 0px;
+      padding-top: 0;
+      padding-left: 50px;
     }
   }
   &__paragraph--two {
-    color: $biocolor;
+    color: $BandSite-Black;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
@@ -208,26 +215,36 @@ html {
 }
 
 .photo-gallery {
-  padding-top: 20px;
-  background-color: $photogallerybg;
+  padding-top: 30px;
+  background-color: $Alabaster;
+  color: $BandSite-Black;
   &__title {
-    padding-left: 54px;
-    font-weight: 600;
-    width: 100vw;
+    padding-left: 15px;
+    @include tablet {
+      padding-left: 44px;
+      font-weight: 600;
+      width: 100vw;
+    }
+    @include desktop {
+      padding-left: 130px;
+    }
   }
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 32px;
+    @include desktop {
+      padding: 0 64px;
+    }
   }
   &__image {
     padding: 8px 16px;
     width: 100%;
-    filter: grayscale(50%);
+    filter: grayscale(100%);
     transition: 1s;
     &:hover {
-      filter: grayscale(100%);
+      filter: grayscale(50%);
     }
     @include tablet {
       width: 30%;
@@ -237,21 +254,61 @@ html {
 }
 
 .footer {
-  background-color: $footercolor;
-  color: $footertextcolor;
+  background-color: $BandSite-Black;
+  color: $White;
   width: 100vw;
   padding: 16px;
-
-  &__one {
+  @include tablet {
+    padding: 42px;
+  }
+  @include desktop {
+    padding-top: 64px;
+  }
+  &__container {
+    &-whole {
+      @include tablet {
+        position: relative;
+      }
+    }
+    &-top {
+      @include tablet {
+        display: flex;
+      }
+    }
+    &-bottom {
+      @include tablet {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+      @include desktop {
+        width: 70%;
+      }
+    }
   }
   &__title {
     padding-top: 1rem;
     padding-bottom: 15px;
     font-size: 24px;
     line-height: 32px;
-    font-weight: 600;
+    font-weight: 700;
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+    }
   }
   &__two {
+    padding-bottom: 15px;
+    @include tablet {
+      display: flex;
+      align-items: flex-end;
+      padding-left: 47px;
+      padding-bottom: 23px;
+    }
+    @include desktop {
+      padding-left: 122px;
+    }
   }
   &__icon--instagram {
     padding-right: 20px;
@@ -259,29 +316,26 @@ html {
   &__icon--facebook {
     padding-right: 20px;
   }
-  &__icon--twitter {
-  }
   &__section--left {
     @include tablet {
       display: flex;
       flex-direction: column;
     }
-    @include desktop {
-    }
   }
   &__three {
-    padding-top: 15px;
     padding-bottom: 15px;
+    @include tablet {
+      padding-bottom: 25px;
+    }
   }
   &__broadway-adress {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     padding-bottom: 15px;
-  }
-  &__four {
-  }
-  &__five {
+    @include tablet {
+      padding-bottom: 25px;
+    }
   }
   &__email--one {
     font-weight: 400;
@@ -297,22 +351,20 @@ html {
     @include desktop {
     }
   }
-  &__six {
-  }
   &__group {
     padding-bottom: 15px;
+    @include tablet {
+      padding-bottom: 25px;
+    }
   }
   &__booking--one {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-  }
-  &__seven {
-  }
-  &__booking--one {
     padding-bottom: 15px;
-  }
-  &__eight {
+    @include tablet {
+      padding-bottom: 25px;
+    }
   }
   &__email--two {
     font-weight: 400;
@@ -328,19 +380,16 @@ html {
     @include desktop {
     }
   }
-  &__nine {
-  }
-  &__ten {
-  }
   &__booking--two {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     padding-bottom: 15px;
+    @include tablet {
+      padding-bottom: 25px;
+    }
   }
-  &__eleven {
-  }
-  &____email--three {
+  &__email--three {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
@@ -351,8 +400,15 @@ html {
     padding-bottom: 10px;
   }
   &__logo {
-  }
-  &__thirteen {
+    @include tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 25px;
+    }
+    @include desktop {
+      padding-right: 15px;
+    }
   }
   &__copyright {
     font-weight: 400;
