@@ -1,0 +1,12 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/reset";
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  background-image: url(../assets/images/hero-shows.jpg);
+  margin-bottom: 8px;
+}
