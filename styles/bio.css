@@ -660,4 +660,97 @@ html {
     padding: 8px;
   }
 }
+
+.forum__container {
+  padding: 0 16px;
+}
+
+.forum__title {
+  color: #323232;
+}
+
+.forum__avatar {
+  height: 30px;
+  width: 30px;
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.forum__name--title {
+  color: #e1e1e1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.forum__comment-title {
+  color: #e1e1e1;
+}
+
+.forum__section {
+  color: #323232;
+}
+
+.forum__section-two {
+  padding: 10px;
+}
+
+.forum__section-three {
+  padding: 10px;
+}
+
+.forum__section-four {
+  padding: 10px;
+}
+
+.forum__subsection--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.forum__avatar-blank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.forum__user {
+  color: #323232;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.forum__date {
+  color: #323232;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.forum__body {
+  color: #323232;
+  padding-left: 38px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.forum__divider {
+  border-top: solid 1px #e1e1e1;
+}
+
+.forum__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=bio.css.map */

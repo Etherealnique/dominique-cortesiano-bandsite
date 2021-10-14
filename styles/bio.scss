@@ -182,3 +182,84 @@ html {
     }
   }
 }
+
+.forum {
+  &__container {
+    padding: 0 16px;
+  }
+  &__title {
+    color: $BandSite-Black;
+  }
+  &__avatar {
+    height: 30px;
+    width: 30px;
+    background-image: url("../assets/images/Mohan-muruge.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  &__name--title {
+    color: $Mercury;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__comment-title {
+    color: $Mercury;
+  }
+  &__button {
+    $White: #ffffff;
+  }
+
+  &__section {
+    color: $BandSite-Black;
+    &-one {
+    }
+    &-two {
+      padding: 10px;
+    }
+    &-three {
+      padding: 10px;
+    }
+    &-four {
+      padding: 10px;
+    }
+  }
+  &__subsection--header {
+    display: flex;
+  }
+  &__avatar-blank {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    background-color: $Mercury;
+    border-radius: 50%;
+  }
+  &__user {
+    color: $BandSite-Black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  &__date {
+    color: $BandSite-Black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  &__body {
+    color: $BandSite-Black;
+    padding-left: 38px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  &__divider {
+    border-top: solid 1px $Mercury;
+  }
+
+  &__banner {
+    display: flex;
+  }
+}
