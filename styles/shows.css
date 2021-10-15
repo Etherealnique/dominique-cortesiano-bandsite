@@ -32,4 +32,30 @@ html * {
   background-image: url(../assets/images/hero-shows.jpg);
   margin-bottom: 8px;
 }
+
+.hero__overlay {
+  background-color: #323232;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.shows__title {
+  color: #323232;
+  padding: 16px 16px 0 16px;
+}
+
+.shows__subtitle {
+  color: #e1e1e1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.shows__array {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
 /*# sourceMappingURL=shows.css.map */

@@ -662,7 +662,7 @@ html {
 }
 
 .forum__container {
-  padding: 0 16px;
+  padding: 16px 16px 0 16px;
 }
 
 .forum__title {
@@ -695,6 +695,7 @@ html {
 }
 
 .forum__section-two {
+  position: relative;
   padding: 10px;
 }
 
@@ -710,12 +711,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .forum__avatar-blank {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
   height: 30px;
   width: 30px;
   background-color: #e1e1e1;
@@ -727,6 +729,7 @@ html {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  padding-left: 10vw;
 }
 
 .forum__date {
@@ -734,11 +737,12 @@ html {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  color: #e1e1e1;
 }
 
 .forum__body {
   color: #323232;
-  padding-left: 38px;
+  padding-left: 10vw;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;

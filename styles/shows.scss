@@ -9,4 +9,29 @@
   width: 100vw;
   background-image: url(../assets/images/hero-shows.jpg);
   margin-bottom: 8px;
+  &__overlay {
+    background-color: $BandSite-Black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.shows {
+  &__title {
+    color: $BandSite-Black;
+    padding: 16px 16px 0 16px;
+  }
+  &__subtitle {
+    color: $Mercury;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__array {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
 }

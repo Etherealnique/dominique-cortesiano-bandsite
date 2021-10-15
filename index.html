@@ -139,16 +139,18 @@
         <div class="forum__title">
           <h2>Join the Conversation</h2>
         </div>
+        <form action="x" id="myForm" method="POST">
+          <label class="forum__name--title" for="name">name</label>
+          <input id="name" type="text" name="name" />
+          <label class="forum__comment-title" for="comment">comment</label>
+          <input id="comment" type="text" name="comment" />
+          <input type="submit" />
+        </form>
+
         <figure class="forum__avatar"></figure>
-        <div class="forum__name--title">
-          <p>Name</p>
-        </div>
-        <div class="forum__comment-title">
-          <p>Comment</p>
-        </div>
       </div>
       <button class="forum__button"><h3>COMMENT</h3></button>
-      <hr class="solid" />
+      <hr class="divider" />
       <div class="forum__section-two">
         <div class="forum__subsection--header">
           <figure class="forum__avatar-blank"></figure>

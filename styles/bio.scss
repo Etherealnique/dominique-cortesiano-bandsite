@@ -185,7 +185,7 @@ html {
 
 .forum {
   &__container {
-    padding: 0 16px;
+    padding: 16px 16px 0 16px;
   }
   &__title {
     color: $BandSite-Black;
@@ -214,9 +214,12 @@ html {
 
   &__section {
     color: $BandSite-Black;
-    &-one {
-    }
+
+    // &-one {
+    // }
+
     &-two {
+      position: relative;
       padding: 10px;
     }
     &-three {
@@ -228,9 +231,10 @@ html {
   }
   &__subsection--header {
     display: flex;
+    justify-content: space-between;
   }
   &__avatar-blank {
-    display: flex;
+    position: absolute;
     height: 30px;
     width: 30px;
     background-color: $Mercury;
@@ -241,16 +245,19 @@ html {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    padding-left: 10vw;
   }
   &__date {
     color: $BandSite-Black;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    color: $Mercury;
+    // padding-left: 20vw;
   }
   &__body {
     color: $BandSite-Black;
-    padding-left: 38px;
+    padding-left: 10vw;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
