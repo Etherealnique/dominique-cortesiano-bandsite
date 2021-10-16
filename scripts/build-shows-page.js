@@ -125,6 +125,11 @@ for (let i = 0; i < tixDates.length; i++) {
   const loc = document.createElement("td");
   loc.innerText = tixDates[i].location;
 
+  const button = document.createElement("button");
+  button.innerText = "BUY TICKETS";
+  button.setAttribute("onclick", ".location.href='./shows.html';");
+  tbodyRow.appendChild(button);
+
   tableBody.appendChild(tbodyRow);
   tbodyRow.appendChild(date);
   tbodyRow.appendChild(venue);
@@ -137,3 +142,7 @@ for (let i = 0; i < tixDates.length; i++) {
 // // adds class for styling
 // tableDate.classList.add("shows__subtitle");
 // // adds tr semantic to thead
+const tbodyRow = ["thor", "captain america", "hulk"];
+avengers.forEach((item, index) => {
+  console.log(index, item);
+});

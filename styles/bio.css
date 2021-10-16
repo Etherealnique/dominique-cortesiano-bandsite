@@ -172,6 +172,7 @@ html * {
   color: #ffffff;
   width: 100vw;
   padding: 16px;
+  margin-top: 1rem;
 }
 
 @media (min-width: 48rem) {
@@ -631,7 +632,6 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 32px;
 }
 
 @media (min-width: 80rem) {
@@ -641,7 +641,7 @@ html {
 }
 
 .photo-gallery__image {
-  padding: 8px 16px;
+  padding: 10px 16px;
   width: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -677,37 +677,34 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
+  position: absolute;
 }
 
-.forum__name--title {
+.forum__info {
+  padding-left: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.forum__name-title {
   color: #e1e1e1;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
 }
 
 .forum__comment-title {
   color: #e1e1e1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .forum__section {
   color: #323232;
 }
 
-.forum__section-two {
-  position: relative;
-  padding: 10px;
-}
-
-.forum__section-three {
-  padding: 10px;
-}
-
-.forum__section-four {
-  padding: 10px;
-}
-
 .forum__subsection--header {
+  padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,6 +719,7 @@ html {
   width: 30px;
   background-color: #e1e1e1;
   border-radius: 50%;
+  padding-left: 1rem;
 }
 
 .forum__user {
@@ -729,7 +727,7 @@ html {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
-  padding-left: 10vw;
+  padding-left: 13vw;
 }
 
 .forum__date {
@@ -742,10 +740,10 @@ html {
 
 .forum__body {
   color: #323232;
-  padding-left: 10vw;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  padding: 0.75rem 0 1rem 13vw;
 }
 
 .forum__divider {

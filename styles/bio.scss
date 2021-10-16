@@ -159,17 +159,18 @@ html {
       padding-left: 130px;
     }
   }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 32px;
+
     @include desktop {
       padding: 0 64px;
     }
   }
   &__image {
-    padding: 8px 16px;
+    padding: 10px 16px;
     width: 100%;
     filter: grayscale(100%);
     transition: 1s;
@@ -198,15 +199,23 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    position: absolute;
   }
-  &__name--title {
+  &__info {
+    padding-left: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  &__name-title {
     color: $Mercury;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
   }
   &__comment-title {
     color: $Mercury;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
   }
   &__button {
     $White: #ffffff;
@@ -214,22 +223,9 @@ html {
 
   &__section {
     color: $BandSite-Black;
-
-    // &-one {
-    // }
-
-    &-two {
-      position: relative;
-      padding: 10px;
-    }
-    &-three {
-      padding: 10px;
-    }
-    &-four {
-      padding: 10px;
-    }
   }
   &__subsection--header {
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
   }
@@ -239,13 +235,14 @@ html {
     width: 30px;
     background-color: $Mercury;
     border-radius: 50%;
+    padding-left: 1rem;
   }
   &__user {
     color: $BandSite-Black;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-    padding-left: 10vw;
+    padding-left: 13vw;
   }
   &__date {
     color: $BandSite-Black;
@@ -257,10 +254,10 @@ html {
   }
   &__body {
     color: $BandSite-Black;
-    padding-left: 10vw;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    padding: 0.75rem 0 1rem 13vw;
   }
   &__divider {
     border-top: solid 1px $Mercury;
