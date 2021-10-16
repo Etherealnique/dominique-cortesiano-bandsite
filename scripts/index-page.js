@@ -29,12 +29,12 @@ const displayComments = (obj) => {
   const divContainer = document.createElement("div");
   divContainer.classList.add("forum__subsection--header");
 
-  const figure = document.createElement("figure");
-  figure.classList.add("forum__avatar-blank");
-
   const nameEl = document.createElement("h2");
   nameEl.classList.add("forum__user");
   nameEl.innerText = obj.name;
+
+  const figure = document.createElement("figure");
+  figure.classList.add("forum__avatar-blank");
 
   const dateEl = document.createElement("h3");
   dateEl.classList.add("forum__date");
@@ -45,7 +45,7 @@ const displayComments = (obj) => {
   contentEl.innerText = obj.comment;
 
   const dividerEl = document.createElement("hr");
-  dividerEl.classList.add("divider");
+  dividerEl.classList.add("forum__divider");
   // dividerEl.innerText = obj.comment;
 
   commentContainer.appendChild(divContainer);

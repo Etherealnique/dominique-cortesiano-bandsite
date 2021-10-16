@@ -111,7 +111,7 @@
           class="photo-gallery__image"
         />
         <img
-          src="./assets/images/Photo-galle--]]ry-6.jpg"
+          src="./assets/images/Photo-gallery-6.jpg"
           alt="photo-gallery-6"
           class="photo-gallery__image"
         />
@@ -135,39 +135,38 @@
     <!-- PHOTO GALLERY ENDS -->
     <!-- FORUM SECTION STARTS -->
     <div class="forum__container">
-      <div class="forum__title">
-        <h2>Join the Conversation</h2>
-        <figure class="forum__avatar"></figure>
-      </div>
+      <h2 class="forum__title">Join the Conversation</h2>
+      <figure class="forum__avatar"></figure>
+
       <div class="forum__info">
         <form id="myForm">
           <label class="forum__name-title" for="username">NAME</label><br />
           <input
-            id="forum__comment-name--box"
+            style="padding-left: 0.5rem"
+            class="forum__comment-name--box"
             type="text"
             name="name"
             placeholder="Enter your name"
-          /><br />
-
-          <label class="forum__comment-title" for="comment-box">COMMENT</label
-          ><br />
-          <textarea
-            class="comment"
-            id="comment-box"
-            rows="5"
-            cols="37"
-            name="comment"
-            placeholder="Add a new comment"
-          ></textarea
-          ><br />
-
-          <button type="submit">COMMENT</button>
+          />
+          <br />
+          <div class="forum__comment-subcontainer">
+            <label class="forum__comment-title" for="comment-box">COMMENT</label
+            ><br />
+            <textarea
+              style="padding: 0.5rem 0 0 0.5rem"
+              class="forum__comment-content--box"
+              name="comment"
+              placeholder="Add new commment"
+            ></textarea
+            ><br />
+          </div>
+          <button class="forum__button" type="submit">COMMENT</button>
         </form>
       </div>
+
       <hr class="divider" />
       <section class="forum-container"></section>
     </div>
-
     <!-- FORUM SECTION ENDS -->
     <!-- FOOTER STARTS -->
     <footer class="footer">
