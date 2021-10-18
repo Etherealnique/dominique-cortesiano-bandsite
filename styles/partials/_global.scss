@@ -75,18 +75,18 @@
   }
 }
 // NAVGATION ENDS
-
+//FOOTER STARTS//
 .footer {
   background-color: $BandSite-Black;
   color: $White;
   width: 100vw;
   padding: 16px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   @include tablet {
-    padding: 42px;
+    padding: 2.625rem;
   }
   @include desktop {
-    padding-top: 64px;
+    padding-top: 2.1875rem;
   }
   &__container {
     &-whole {

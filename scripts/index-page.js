@@ -23,50 +23,59 @@ const comments = [
 ];
 
 const displayComments = (obj) => {
+  //creates div container for whole section
   const commentContainer = document.createElement("div");
+  //creates class
   commentContainer.classList.add("comment-container");
-
+  //creates div for subsection header
   const divContainer = document.createElement("div");
+  //creates class
   divContainer.classList.add("forum__subsection--header");
-
+  //creates element for forum user
   const nameEl = document.createElement("h2");
+  //creates class
   nameEl.classList.add("forum__user");
+  //inserts user's name
   nameEl.innerText = obj.name;
-
+  //creates figure for blank avatar
   const figure = document.createElement("figure");
+  //creates class
   figure.classList.add("forum__avatar-blank");
-
+  //creates element for forum date posted
   const dateEl = document.createElement("h3");
+  //creates class
   dateEl.classList.add("forum__date");
+  //inserts the date the comment was posted
   dateEl.innerText = obj.date;
-
+  //creates element for forum content
   const contentEl = document.createElement("p");
+  //creates class
   contentEl.classList.add("forum__body");
+  //inserts content posted by user
   contentEl.innerText = obj.comment;
 
-  const dividerEl = document.createElement("hr");
-  dividerEl.classList.add("forum__divider");
-  // dividerEl.innerText = obj.comment;
-
-  commentContainer.appendChild(divContainer);
+  //appends each element to appropriate section
   divContainer.appendChild(figure);
+  commentContainer.appendChild(divContainer);
+
   divContainer.appendChild(nameEl);
   divContainer.appendChild(dateEl);
   commentContainer.appendChild(contentEl);
-  commentContainer.appendChild(dividerEl);
-
   containerEl.appendChild(commentContainer);
 };
-
+//displays comment for each element
 comments.forEach((element) => {
   displayComments(element);
 });
-
+//links submit button to show new comments posted by new user
 formEl.addEventListener("submit", (event) => {
+  //deletes default refresh
   event.preventDefault();
+  //inserts content created by new user
   containerEl.innerText = "";
   const userName = event.target.name.value;
   const userComment = event.target.comment.value;
+  //creates date for new user's comment
   const userDate = new Date(Date.now()).toLocaleDateString();
 
   const newComment = {

@@ -43,7 +43,7 @@ html {
 .bio {
   padding: 16px;
   @include tablet {
-    padding: 36px 36px 0 36px;
+    padding: 2.25rem 2.25rem 0 2.25rem;
   }
   &__paragraph-section {
     @include tablet {
@@ -56,8 +56,8 @@ html {
     line-height: 32px;
     font-weight: 700;
     color: $BandSite-Black;
-    padding-left: 2.5px;
-    padding-bottom: 5px;
+    padding-left: 0.15625rem;
+    padding-bottom: 0.3125rem;
     @include tablet {
       font-weight: 700;
       font-size: 36px;
@@ -67,16 +67,16 @@ html {
   }
   &__holder {
     @include tablet {
-      padding-top: 16px;
+      padding-top: 1rem;
       padding-bottom: 0;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
     @include desktop {
       padding-top: 30;
       padding-bottom: 0;
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 12.5rem;
+      padding-right: 12.5rem;
     }
   }
   &__image {
@@ -91,26 +91,26 @@ html {
     font-size: 14px;
     line-height: 22px;
     color: $BandSite-Black;
-    padding-top: 20px;
-    padding-bottom: 8px;
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
     @include tablet {
       font-size: 24px;
       line-height: 36px;
-      max-width: 722px;
+      max-width: 45.125rem;
     }
     &--artist {
       font-weight: 600;
       font-size: 14px;
       line-height: 22px;
       color: $BandSite-Black;
-      padding-bottom: 25px;
+      padding-bottom: 1.5625rem;
     }
   }
   &__subtitle {
     font-weight: 600;
     font-size: 13px;
     line-height: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     @include tablet {
       font-size: 24px;
       line-height: 36px;
@@ -130,10 +130,10 @@ html {
     padding-right: 1rem;
   }
   &__container--bottom {
-    padding-top: 10px;
+    padding-top: 0.625rem;
     @include tablet {
       padding-top: 0;
-      padding-left: 50px;
+      padding-left: 3.125rem;
     }
   }
   &__paragraph--two {
@@ -145,13 +145,13 @@ html {
 }
 
 .photo-gallery {
-  padding-top: 30px;
+  padding-top: 1.875rem;
   background-color: $Alabaster;
   color: $BandSite-Black;
   &__title {
-    padding-left: 15px;
+    padding-left: 0.9375rem;
     @include tablet {
-      padding-left: 44px;
+      padding-left: 2.75rem;
       font-weight: 600;
       width: 100vw;
     }
@@ -166,11 +166,11 @@ html {
     justify-content: center;
 
     @include desktop {
-      padding: 0 64px;
+      padding: 0 4rem;
     }
   }
   &__image {
-    padding: 10px 16px;
+    padding: 0.625rem 1rem;
     width: 100%;
     filter: grayscale(100%);
     transition: 1s;
@@ -179,14 +179,17 @@ html {
     }
     @include tablet {
       width: 30%;
-      padding: 8px;
+      padding: 0.5rem;
     }
   }
 }
 
 .forum {
   &__container {
-    padding: 16px 16px 0 16px;
+    padding: 1rem 1rem 0 1rem;
+    @include tablet {
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    }
   }
 
   &__title {
@@ -197,8 +200,8 @@ html {
     }
   }
   &__avatar {
-    height: 35px;
-    width: 35px;
+    height: 2.1875rem;
+    width: 2.1875rem;
     background-image: url("../assets/images/Mohan-muruge.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -207,8 +210,12 @@ html {
     position: absolute;
     margin-top: 2.5rem;
     @include tablet {
-      height: 45px;
-      width: 45px;
+      height: 2.8125rem;
+      width: 2.8125rem;
+      margin-left: 3rem;
+    }
+    @include desktop {
+      margin-left: 12.5rem;
     }
   }
   &__info {
@@ -216,7 +223,15 @@ html {
     padding-left: 2.5rem;
     padding-bottom: 1rem;
     @include tablet {
-      padding-left: 15vw;
+      padding-top: 1rem;
+      padding-left: 7rem;
+      padding-bottom: 1rem;
+      padding-right: 5rem;
+    }
+    @include desktop {
+      padding-left: 16rem;
+      padding-bottom: 1rem;
+      padding-right: 19rem;
     }
   }
 
@@ -230,13 +245,13 @@ html {
   &__comment {
     &-name--box {
       background-color: $Alabaster;
-      height: 36px;
+      height: 2.25rem;
       width: 100%;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       border: solid $Mercury 1px;
       margin-top: 0.3rem;
       @include tablet {
-        height: 60px;
+        height: 3.75rem;
       }
     }
     &-title {
@@ -249,9 +264,9 @@ html {
     &-content--box {
       margin-top: 0.3rem;
       background-color: $Alabaster;
-      height: 100px;
+      height: 6.25rem;
       width: 100%;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       border: solid $Mercury 1px;
     }
     &-subcontainer {
@@ -265,32 +280,42 @@ html {
 
   &__comment-container {
     position: relative;
+    @include tablet {
+      border-top: solid 1px $Mercury;
+    }
   }
-
   &__subsection--header {
+    border-top: solid 1px $Mercury;
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      padding-bottom: 0.5rem;
+    }
   }
   &__avatar-blank {
     position: absolute;
-    height: 35px;
-    width: 35px;
+    height: 2.1875rem;
+    width: 2.1875rem;
     background-color: $Mercury;
     border-radius: 50%;
     margin-left: 2vw;
     @include tablet {
-      margin-left: 3vw;
-      height: 45px;
-      width: 45px;
+      margin-bottom: 1.25rem;
+      margin-left: -55px;
+      height: 2.8125rem;
+      width: 2.8125rem;
     }
   }
   &__user {
     color: $BandSite-Black;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 13px;
     line-height: 18px;
     padding-left: 16vw;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__date {
     color: $BandSite-Black;
@@ -306,25 +331,40 @@ html {
     font-size: 13px;
     line-height: 18px;
     padding: 0.75rem 0 1rem 16vw;
+    border-bottom: solid 1px $Mercury;
+    @include tablet {
+      padding: 0 0 1rem 0;
+    }
   }
 
-  &__divider {
-    border: solid 1px $Mercury;
-    // margin-right: 5%;
-    // margin-left: 5%;
-  }
   &__button {
     background-color: $BandSite-Black;
     color: $White;
-    padding: 6px 10px 5px 10px;
+    padding: 0.375rem 0.625rem 0.3125rem 0.625rem;
     border-radius: 4%;
     width: 100%;
     &:hover {
       background: $BandSite-DarkBlack;
     }
+    @include tablet {
+      margin-top: 1rem;
+      width: 7rem;
+      margin-left: 75%;
+    }
+    @include desktop {
+      margin-left: 83%;
+    }
   }
 
   &__banner {
     display: flex;
+  }
+  &-container {
+    @include tablet {
+      padding: 0px 5rem 0 7rem;
+    }
+    @include desktop {
+      padding: 0px 19rem 0 16rem;
+    }
   }
 }

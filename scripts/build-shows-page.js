@@ -33,116 +33,105 @@ const tixDates = [
 
 const shows = document.querySelector(".shows");
 const showTitle = document.createElement("h2");
-// adds class for styling
+
 showTitle.classList.add("shows__title");
-//adds title text names shows
 showTitle.innerText = "Shows";
-// adds to div parent
 shows.appendChild(showTitle);
-// creates table
+
 const table = document.createElement("table");
-// adds table to show section
+table.classList.add("shows__container");
 shows.appendChild(table);
-// creates thead semantic
+
 const tableHead = document.createElement("thead");
-// adds thead semantic to table
 table.appendChild(tableHead);
-// create table row
 const tableRow = document.createElement("tr");
-// adds tr semantic to thead
 tableHead.appendChild(tableRow);
 
-const tableDate = document.createElement("th");
-// adds date text to row
+// Heading titles for Tablet/Desktop View//
+const dateText = document.createElement("div");
+dateText.classList.add("shows__title-container");
+tableHead.appendChild(dateText);
+
+const tableDate = document.createElement("h1");
 tableDate.innerText = "DATE";
-// adds class for styling
-tableDate.classList.add("shows__subtitle");
-// adds tr semantic to thead
-tableRow.appendChild(tableDate);
+tableDate.classList.add("shows__head-title--date");
+dateText.appendChild(tableDate);
 
-const tableVenue = document.createElement("th");
-// adds date text to row
+const tableVenue = document.createElement("h1");
 tableVenue.innerText = "VENUE";
-// adds class for styling
-tableVenue.classList.add("shows__subtitle");
-// adds tr semantic to thead
-tableRow.appendChild(tableVenue);
+tableVenue.classList.add("shows__head-title--venue");
+dateText.appendChild(tableVenue);
 
-const tableLocation = document.createElement("th");
-// adds date text to row
-tableLocation.innerText = "LOCATION";
-// adds class for styling
-tableLocation.classList.add("shows__subtitle");
-// adds tr semantic to thead
-tableRow.appendChild(tableLocation);
+const tableLoc = document.createElement("h1");
+tableLoc.innerText = "LOCATION";
+tableLoc.classList.add("shows__head-title--location");
+dateText.appendChild(tableLoc);
+//END//
 
-const tableButton = document.createElement("button");
-// adds date text to row
-tableButton.innerText = "BUY TICKETS";
-// adds class for styling
-tableButton.classList.add("shows__button");
-// adds tr semantic to thead
-tableRow.appendChild(tableButton);
-
-// // creating table body semantic
 const tableBody = document.createElement("tbody");
-// // // add body to table
 table.appendChild(tableBody);
-// // // // adding actually date
-// const tbodyRow = document.createElement("tr");
-// tableBody.appendChild(tbodyRow);
-
-// const date = document.createElement("td");
-// // // // adding to table body
-// tbodyRow.appendChild(date);
-// // // refered to first object and added date
-// date.innerText = tixDates[0].date;
-
-// const venue = document.createElement("td");
-// // // adding to table body
-// tbodyRow.appendChild(venue);
-// // // refered to first object and added venue
-// venue.innerText = tixDates[0].venue;
-
-// const loc = document.createElement("td");
-// // // adding to table body
-// tbodyRow.appendChild(loc);
-// // // refered to first object and added location
-// loc.innerText = tixDates[0].location;
 
 for (let i = 0; i < tixDates.length; i++) {
   const tbodyRow = document.createElement("tr");
-  // adds class for styling
   tbodyRow.classList.add("shows__array");
 
-  const date = document.createElement("td");
+  //dividers for date//
+  const dateDiv = document.createElement("div");
+  dateDiv.classList.add("date__info");
+  tbodyRow.appendChild(dateDiv);
 
+  const tableDate = document.createElement("td");
+  tableDate.innerText = "DATE";
+  tableDate.classList.add("shows__subtitle");
+  dateDiv.appendChild(tableDate);
+
+  const date = document.createElement("th");
+  date.classList.add("shows__tixdate");
   date.innerText = tixDates[i].date;
+  dateDiv.appendChild(tableDate);
+
+  //dividers for date//
+  //divider for venue//
+
+  const venueDiv = document.createElement("div");
+  venueDiv.classList.add("venue__info");
+  tbodyRow.appendChild(venueDiv);
+
+  const tableVenue = document.createElement("th");
+  tableVenue.innerText = "VENUE";
+  tableVenue.classList.add("shows__subtitle");
+  tbodyRow.appendChild(tableVenue);
 
   const venue = document.createElement("td");
   venue.innerText = tixDates[i].venue;
+  venue.classList.add("shows__tixvenue");
+
+  //divider for venue//
+  //divider for location//
+
+  const locDiv = document.createElement("div");
+  locDiv.classList.add("loc__info");
+  tbodyRow.appendChild(locDiv);
+
+  const tableLocation = document.createElement("th");
+  tableLocation.innerText = "LOCATION";
+  tableLocation.classList.add("shows__subtitle");
+  tbodyRow.appendChild(tableLocation);
 
   const loc = document.createElement("td");
   loc.innerText = tixDates[i].location;
+  loc.classList.add("shows__tixloc");
+
+  //divider for location//
 
   const button = document.createElement("button");
+  button.classList.add("shows__button");
   button.innerText = "BUY TICKETS";
   button.setAttribute("onclick", ".location.href='./shows.html';");
-  tbodyRow.appendChild(button);
 
   tableBody.appendChild(tbodyRow);
-  tbodyRow.appendChild(date);
-  tbodyRow.appendChild(venue);
-  tbodyRow.appendChild(loc);
+  tableDate.appendChild(date);
+  tableVenue.appendChild(venue);
+  tableLocation.appendChild(loc);
+  tbodyRow.appendChild(button);
 }
-
-// const tableDate = document.createElement("th");
-// // adds date text to row
-// tableDate.innerText = "DATE";
-// // adds class for styling
-// tableDate.classList.add("shows__subtitle");
-// // adds tr semantic to thead
-const tbodyRow = ["thor", "captain america", "hulk"];
-avengers.forEach((item, index) => {
-  console.log(index, item);
-});

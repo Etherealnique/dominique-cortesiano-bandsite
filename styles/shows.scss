@@ -7,31 +7,228 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
+  height: 35vh;
   background-image: url(../assets/images/hero-shows.jpg);
-  margin-bottom: 8px;
+  // margin-bottom: 8px;
+  z-index: -6;
   &__overlay {
     background-color: $BandSite-Black;
     opacity: 0.5;
     height: 100%;
     width: 100%;
     position: absolute;
+    z-index: -5;
+  }
+  @include desktop {
+    height: 40vh;
+  }
+
+  &__album {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $White;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    @include tablet {
+      padding-top: 4rem;
+      padding-left: 3rem;
+      font-size: 30px;
+    }
+    @include desktop {
+      padding-top: 10rem;
+      padding-left: 11rem;
+    }
+  }
+
+  &__title {
+    padding: 0 6rem 0 1rem;
+    font-weight: 600;
+    @include tablet {
+      padding: 1.125rem 11rem 0 3rem;
+    }
+    @include desktop {
+      padding: 1.125rem 50rem 0 11rem;
+      position: absolute;
+    }
+  }
+
+  &__music-widget {
+    text-align: center;
+    padding: 0.125rem 2rem 3.5rem 1.5rem;
+    margin-bottom: -11rem;
+    @include tablet {
+      text-align: center;
+      padding: 0.1875rem 21rem 2.0625rem 3rem;
+      margin-bottom: -13.5rem;
+      @include desktop {
+        position: absolute;
+        padding: 0 16rem 1.25rem 1rem;
+        margin: 1vw 9vw 1vw 54vw;
+        width: 50%;
+      }
+    }
   }
 }
 
 .shows {
   &__title {
-    color: $BandSite-Black;
-    padding: 16px 16px 0 16px;
+    padding: 1rem 0 1rem 1rem;
+    @include tablet {
+      padding: 3rem 0 2rem 2rem;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+    }
+    @include desktop {
+      position: absolute;
+      margin-bottom: 2rem;
+      padding: 1.5rem 0 0 6rem;
+    }
   }
+
+  &__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100vw;
+    @include tablet {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    @include desktop {
+      padding-top: 3rem;
+      padding-left: 21rem;
+      padding-right: 6rem;
+    }
+  }
+
+  &__array {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px $Mercury;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title-container {
+    display: none;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__subtitle {
+    text-align: left;
     color: $Mercury;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-  }
-  &__array {
     font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
+    @include tablet {
+      visibility: hidden;
+    }
+  }
+
+  &__head-title--date {
+    color: $Mercury;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  &__head-title--venue {
+    color: $Mercury;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    @include tablet {
+      padding-left: 8%;
+    }
+  }
+
+  &__head-title--location {
+    color: $Mercury;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    @include tablet {
+      padding-right: 32%;
+    }
+  }
+
+  &__tixdate {
+    color: $BandSite-Black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400px;
+      visibility: visible;
+    }
+  }
+
+  &__tixvenue {
+    color: $BandSite-Black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    visibility: visible;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400px;
+      width: 100%;
+    }
+  }
+  &__tixloc {
+    color: $BandSite-Black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    visibility: visible;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400px;
+    }
+  }
+
+  &__button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $BandSite-Black;
+    color: $White;
+    padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
+    border-radius: 4%;
+    width: 100%;
+    &:hover {
+      background: $BandSite-DarkBlack;
+    }
+    @include tablet {
+      width: 8rem;
+    }
+  }
+}
+
+@include tablet {
+  select {
+    font-size: 1.2rem;
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+  tr:hover td {
+    background-color: $Mercury;
+  }
+  .selected {
+    background-color: $Alabaster !important;
   }
 }
