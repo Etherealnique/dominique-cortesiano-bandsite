@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/bio.css" />
     <link rel="stylesheet" href="../styles/shows.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Shows</title>
   </head>
   <body>
@@ -21,29 +22,35 @@
         </a>
       </div>
       <ul class="navbar__list">
-        <a href="../index.html">
+        <a class ="navbar__style" href="../index.html">
           <li class="navbar__link navbar__link--selected">Biography</li>
         </a>
-        <a href="./shows.html"><li class="navbar__link">Shows</li></a>
+        <a class ="navbar__style" href="./shows.html"><li class="navbar__link">Shows</li></a>
       </ul>
     </nav>
     <!-- NAVGATION BAR ENDS -->
     <!-- HERO SECTION BEGINS -->
-    <div class="hero">
-      <span class="hero__overlay"></span>
+    <section class="hero__container"></section>
+    <div class="hero__image">
+      
       <h1 class="hero__album">Beautiful Beasts Album</h1>
       <h1 class="hero__title">Queen of Yellow x For The Stings</h1>
-      <iframe
-        class="hero__music-widget"
-        width="100%"
-        height="166"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/256591463&color=%237c245c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-      >
-      </iframe>
+      <div class="hero__music-container">
+        
+        <iframe
+          class="hero__music-widget"
+          width="100%"
+          height="166"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/256591463&color=%237c245c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        >
+        </iframe>
+        
+      </div>
     </div>
+  </section>
     <!-- HERO SECTION ENDS -->
     <!-- SHOWS INFO STARTS -->
     <table class="shows"></table>

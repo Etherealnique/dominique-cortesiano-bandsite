@@ -77,6 +77,10 @@ html * {
   }
 }
 
+.navbar__style {
+  text-decoration: none;
+}
+
 .navbar__container {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,137 +1,112 @@
-const tixDates = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronaldo Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+const apiKey = "?api_key=b6b1a148-8623-4365-be03-b1583abc254d";
+const apiUrl = `https://project-1-api.herokuapp.com/showdates${apiKey}`;
 
 const shows = document.querySelector(".shows");
-const showTitle = document.createElement("h2");
+axios.get(apiUrl).then((response) => {
+  console.log(response);
+  shows.innerHTML = "";
+  const showTitle = document.createElement("h2");
+  showTitle.classList.add("shows__title");
+  showTitle.innerText = "Shows";
+  shows.appendChild(showTitle);
 
-showTitle.classList.add("shows__title");
-showTitle.innerText = "Shows";
-shows.appendChild(showTitle);
+  const showsMain = document.createElement("div");
+  showsMain.classList.add("shows__main-titles");
+  shows.appendChild(showsMain);
 
-const table = document.createElement("table");
-table.classList.add("shows__container");
-shows.appendChild(table);
+  const dateTitle = document.createElement("p");
+  dateTitle.innerText = "DATE";
+  dateTitle.classList.add("shows__main-date-title");
+  showsMain.appendChild(dateTitle);
 
-const tableHead = document.createElement("thead");
-table.appendChild(tableHead);
-const tableRow = document.createElement("tr");
-tableHead.appendChild(tableRow);
+  const venueTitle = document.createElement("p");
+  venueTitle.innerText = "VENUE";
+  venueTitle.classList.add("shows__main-venue-title");
+  showsMain.appendChild(venueTitle);
 
-// Heading titles for Tablet/Desktop View//
-const dateText = document.createElement("div");
-dateText.classList.add("shows__title-container");
-tableHead.appendChild(dateText);
+  const locTitle = document.createElement("p");
+  locTitle.innerText = "LOCATION";
+  locTitle.classList.add("shows__main-loc-title");
+  showsMain.appendChild(locTitle);
 
-const tableDate = document.createElement("h1");
-tableDate.innerText = "DATE";
-tableDate.classList.add("shows__head-title--date");
-dateText.appendChild(tableDate);
+  const dateText = document.createElement("div");
 
-const tableVenue = document.createElement("h1");
-tableVenue.innerText = "VENUE";
-tableVenue.classList.add("shows__head-title--venue");
-dateText.appendChild(tableVenue);
+  const displayShows = response.data.forEach((showhead) => {
+    const table = document.createElement("table");
+    table.classList.add("shows__container");
+    shows.appendChild(table);
 
-const tableLoc = document.createElement("h1");
-tableLoc.innerText = "LOCATION";
-tableLoc.classList.add("shows__head-title--location");
-dateText.appendChild(tableLoc);
-//END//
+    const tableHead = document.createElement("thead");
+    table.appendChild(tableHead);
+    const tableRow = document.createElement("tr");
 
-const tableBody = document.createElement("tbody");
-table.appendChild(tableBody);
+    tableHead.appendChild(tableRow);
 
-for (let i = 0; i < tixDates.length; i++) {
-  const tbodyRow = document.createElement("tr");
-  tbodyRow.classList.add("shows__array");
+    const tableDate = document.createElement("h1");
+    tableDate.innerText = "DATE";
+    tableDate.classList.add("shows__head-title--date");
+    dateText.appendChild(tableDate);
 
-  //dividers for date//
-  const dateDiv = document.createElement("div");
-  dateDiv.classList.add("date__info");
-  tbodyRow.appendChild(dateDiv);
+    const tableLoc = document.createElement("h1");
+    tableLoc.innerText = "LOCATION";
+    tableLoc.classList.add("shows__head-title--location");
+    dateText.appendChild(tableLoc);
 
-  const tableDate = document.createElement("td");
-  tableDate.innerText = "DATE";
-  tableDate.classList.add("shows__subtitle");
-  dateDiv.appendChild(tableDate);
+    const tableBody = document.createElement("tbody");
+    table.appendChild(tableBody);
 
-  const date = document.createElement("th");
-  date.classList.add("shows__tixdate");
-  date.innerText = tixDates[i].date;
-  dateDiv.appendChild(tableDate);
+    const tbodyRow = document.createElement("tr");
 
-  //dividers for date//
-  //divider for venue//
+    tbodyRow.classList.add("shows__array");
 
-  const venueDiv = document.createElement("div");
-  venueDiv.classList.add("venue__info");
-  tbodyRow.appendChild(venueDiv);
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("date__info");
+    tbodyRow.appendChild(dateDiv);
 
-  const tableVenue = document.createElement("th");
-  tableVenue.innerText = "VENUE";
-  tableVenue.classList.add("shows__subtitle");
-  tbodyRow.appendChild(tableVenue);
+    const date = document.createElement("th");
+    date.classList.add("shows__tixdate");
+    const userDate = new Date(Number(showhead.date)).toLocaleDateString(
+      "en-US"
+    );
+    date.innerText = userDate;
+    dateDiv.appendChild(tableDate);
+    console.log(typeof showhead.date);
 
-  const venue = document.createElement("td");
-  venue.innerText = tixDates[i].venue;
-  venue.classList.add("shows__tixvenue");
+    const venueDiv = document.createElement("div");
+    venueDiv.classList.add("venue__info");
+    tbodyRow.appendChild(venueDiv);
 
-  //divider for venue//
-  //divider for location//
+    const tableVenue = document.createElement("th");
+    tableVenue.innerText = "VENUE";
+    tableVenue.classList.add("shows__subtitle");
+    tbodyRow.appendChild(tableVenue);
 
-  const locDiv = document.createElement("div");
-  locDiv.classList.add("loc__info");
-  tbodyRow.appendChild(locDiv);
+    const venue = document.createElement("td");
+    venue.innerText = showhead.place;
+    venue.classList.add("shows__tixvenue");
 
-  const tableLocation = document.createElement("th");
-  tableLocation.innerText = "LOCATION";
-  tableLocation.classList.add("shows__subtitle");
-  tbodyRow.appendChild(tableLocation);
+    const locDiv = document.createElement("div");
+    locDiv.classList.add("loc__info");
+    tbodyRow.appendChild(locDiv);
 
-  const loc = document.createElement("td");
-  loc.innerText = tixDates[i].location;
-  loc.classList.add("shows__tixloc");
+    const tableLocation = document.createElement("th");
+    tableLocation.innerText = "LOCATION";
+    tableLocation.classList.add("shows__subtitle");
+    tbodyRow.appendChild(tableLocation);
 
-  //divider for location//
+    const loc = document.createElement("td");
+    loc.innerText = showhead.location;
+    loc.classList.add("shows__tixloc");
 
-  const button = document.createElement("button");
-  button.classList.add("shows__button");
-  button.innerText = "BUY TICKETS";
-  button.setAttribute("onclick", ".location.href='./shows.html';");
+    const button = document.createElement("button");
+    button.classList.add("shows__button");
+    button.innerText = "BUY TICKETS";
+    button.setAttribute("onclick", ".location.href='./shows.html';");
 
-  tableBody.appendChild(tbodyRow);
-  tableDate.appendChild(date);
-  tableVenue.appendChild(venue);
-  tableLocation.appendChild(loc);
-  tbodyRow.appendChild(button);
-}
+    tableBody.appendChild(tbodyRow);
+    tableDate.appendChild(date);
+    tableVenue.appendChild(venue);
+    tableLocation.appendChild(loc);
+    tbodyRow.appendChild(button);
+  });
+});

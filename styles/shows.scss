@@ -4,32 +4,35 @@
 
 .hero {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 35vh;
-  background-image: url(../assets/images/hero-shows.jpg);
-  // margin-bottom: 8px;
-  z-index: -6;
-  &__overlay {
-    background-color: $BandSite-Black;
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -5;
+  &__image {
+    z-index: -6;
+    background: linear-gradient(
+        rgba(0.5, 0.5, 0.5, 0.5),
+        rgba(0.5, 0.5, 0.5, 0.5)
+      ),
+      url(../assets/images/hero-shows.jpg);
+    position: relative;
+    object-fit: fill;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 79vw;
+    @include tablet {
+      height: 60vw;
+    }
+    @include desktop {
+      height: 45vw;
+    }
   }
-  @include desktop {
-    height: 40vh;
-  }
-
   &__album {
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
     color: $White;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 1rem;
+    z-index: 56px;
+
     @include tablet {
       padding-top: 4rem;
       padding-left: 3rem;
@@ -43,30 +46,32 @@
 
   &__title {
     padding: 0 6rem 0 1rem;
+    max-width: 20rem;
     font-weight: 600;
     @include tablet {
-      padding: 1.125rem 11rem 0 3rem;
+      padding: 0 3rem 0 2.5rem;
+      max-width: 40rem;
+      font-weight: 600;
     }
     @include desktop {
-      padding: 1.125rem 50rem 0 11rem;
+      padding: 0.125rem 38rem 0 11rem;
       position: absolute;
+      max-width: 100rem;
     }
   }
-
   &__music-widget {
-    text-align: center;
-    padding: 0.125rem 2rem 3.5rem 1.5rem;
-    margin-bottom: -11rem;
+    margin: 1rem 1rem 1.5rem 1rem;
+    height: 80px;
+    width: 275px;
+
     @include tablet {
-      text-align: center;
-      padding: 0.1875rem 21rem 2.0625rem 3rem;
-      margin-bottom: -13.5rem;
-      @include desktop {
-        position: absolute;
-        padding: 0 16rem 1.25rem 1rem;
-        margin: 1vw 9vw 1vw 54vw;
-        width: 50%;
-      }
+      margin: 1rem -1rem 0rem 2.5rem;
+    }
+    @include desktop {
+      margin-left: 45rem;
+      height: 150px;
+      width: 450px;
+      padding: 0rem 0rem 0rem 0rem;
     }
   }
 }
@@ -75,13 +80,12 @@
   &__title {
     padding: 1rem 0 1rem 1rem;
     @include tablet {
-      padding: 3rem 0 2rem 2rem;
+      padding: 3rem 0 0 2rem;
       font-size: 36px;
       line-height: 44px;
       font-weight: 700;
     }
     @include desktop {
-      position: absolute;
       margin-bottom: 2rem;
       padding: 1.5rem 0 0 6rem;
     }
@@ -96,7 +100,6 @@
       padding-right: 3rem;
     }
     @include desktop {
-      padding-top: 3rem;
       padding-left: 21rem;
       padding-right: 6rem;
     }
@@ -111,15 +114,53 @@
       justify-content: space-between;
     }
   }
-
-  &__title-container {
-    display: none;
+  &__main-titles {
     @include tablet {
+      padding-top: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      width: 94%;
+      margin-left: -87px;
+    }
+    @include desktop {
+      margin-left: 123px;
+      width: 79%;
     }
   }
 
+  &__main-date-title {
+    display: none;
+    @include tablet {
+      display: block;
+      color: $Mercury;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  &__main-venue-title {
+    display: none;
+    @include tablet {
+      display: block;
+      color: $Mercury;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  &__main-loc-title {
+    display: none;
+    @include tablet {
+      display: block;
+      color: $Mercury;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
   &__subtitle {
     text-align: left;
     color: $Mercury;
@@ -138,6 +179,9 @@
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
+    @include tablet {
+      visibility: hidden;
+    }
   }
   &__head-title--venue {
     color: $Mercury;
@@ -146,7 +190,7 @@
     line-height: 22px;
     font-weight: 400;
     @include tablet {
-      padding-left: 8%;
+      visibility: hidden;
     }
   }
 
@@ -157,7 +201,7 @@
     line-height: 22px;
     font-weight: 400;
     @include tablet {
-      padding-right: 32%;
+      visibility: hidden;
     }
   }
 
@@ -225,7 +269,7 @@
     padding: 6px;
     margin-bottom: 10px;
   }
-  tr:hover td {
+  tr:hover {
     background-color: $Mercury;
   }
   .selected {
