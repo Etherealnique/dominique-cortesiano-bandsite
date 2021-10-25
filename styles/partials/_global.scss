@@ -1,5 +1,4 @@
 @import "./variables";
-@import "./variables";
 @import "./mixins";
 @import "./reset";
 
@@ -19,7 +18,7 @@
     font-size: 12px;
     line-height: 15px;
   }
-  &__style {
+  &__style{
     text-decoration: none;
   }
   &__container {
